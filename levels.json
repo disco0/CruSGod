@@ -1,0 +1,31 @@
+{
+  "levels": [
+    {
+      "name": "pharmacynetics",
+      "icon": "Level1.png",
+      "description": "qwerty",
+      "targetCount": 3,
+      "targetCountCursed": 4,
+      "parTime": {
+        "normal": "3.12.123",
+        "stock": "4.13.546",
+        "cursed": "5.16.15",
+        "cursedStock": "99.41.567"
+      },
+      "weapons": {
+        "normal": [
+          "zippy",
+          "benis"
+        ],
+        "cursed": [
+          "zkz"
+        ]
+      },
+      "equipment": [
+        "woah",
+        "aaa"
+      ],
+      "additionalInfo": "cool"
+    }
+  ]
+}
