@@ -1,13 +1,12 @@
 :root {
-	/* vars for left container */
-	--cell-size: 128px;
+	--cells-size: 64px;
 	--cells-levels-row: 5;
 	--cells-weapons-row: 6;
 	--cells-equip-row: 8;
-	--right-cells-size: 300px;
 }
 
 * {
+	
 	padding:0;
 	margin:0;
 	font-family: "CrusFont";
@@ -16,9 +15,8 @@
 }
 /* scrollbars sucks */
 *::-webkit-scrollbar {
-	width: 12px; 
-	
-c	height: 14px;
+	width: 12px; 	
+	height: 14px;
 }
 
 *::-webkit-scrollbar-track {
@@ -47,158 +45,14 @@ c	height: 14px;
 html {
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
 }
 body {
 	height: 100%;
 	width: 100%;
 	display: flex;
-	flex-direction: row;	
-}
-
-#leftContainer 
-{
-	background-color:cyan;
-	/* width: calc(var(--cell-size) * var(--cells-levels-row));  */
-	width: auto;
-	flex: initial;
-	display: flex;
-	flex-direction: column;
-	padding: var(--cell-size) calc(var(--cell-size) / 2);
-}
-
-#leftTop {
-	display: block;
-	min-height: min-content;
-	min-width: min-content;	
-	background-color:red;	
-}
-#leftBottom {
-	display: block;
-	height: min-content;
-	min-width: min-content;	
-	background-color:green;	
-}
-#leftTopButtons {
-	min-height: min-content;
-	min-width: min-content;
-	display: grid;
-	grid-template-columns: repeat(3, var(--cell-size));
-}
-
-.leftTopButton
-{
-	display: block;
-	block-size: var(--cell-size);
-}
-.leftTopButton > img
-{
-	max-height:100%;
-	max-width:100%;
-}
-/*var(--mouse-x) and var(--mouse-y) is from mousePositionToCss.js script*/
-.noteOnHover {	
-	font-family: "CeoFont";
-	font-size: 32px;
-	padding: 1px 3px;
-	background-image: url("content/img/background_1colorfix.png");
-	background-size: 100% 100%;
-	position: fixed;
-	z-index: 100;	
-	left: calc(var(--mouse-x) * 100%);
-	top: calc(var(--mouse-y) * 100%);
-}
-
-.leftTopButton:hover > .noteOnHover {
-	display: block;
-}
-.leftTopButton:not(:hover) > .noteOnHover {
-	display: none;
-}
-/* levels list */
-
-#levelsList {
-	display: grid; 	
-	grid-template-columns: repeat(var(--cells-levels-row), var(--cell-size));	
-}
-
-.levelsEntry {
-	display: block;
-	/* block-size: var(--cell-size); */
-	height: var(--cell-size);
-	width: var(--cell-size);
-}
-
-.levelsEntry > img {
-	max-height: 100%;
-	max-width: 100%;
-}
-
-/* equipment list */
-
-#equipmentList {
-	display: grid;
-	grid-template-columns: repeat(var(--cells-equip-row), var(--cell-size));	
-}
-
-.equipEntry {
-	display: block;
-	height: var(--cell-size);	
-	width: var(--cell-size );	
-}
-
-.equipEntry > img {
-	max-height: 100%;
-	max-width: 100%;
-}
-
-/* description */ 
-
-
-#rightContainer {
-	padding: calc(var(--right-cells-size)/2);
-	flex: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: end;
-	background-color:purple;
-}
-
-#description {	
-	text-shadow: 2px 2px #000f;
-	font-size: 30px;
-	overflow-y: scroll;
-	height: 100%;
-	width: 100%;
-	background-color: #507E1680;
-	border: 2px solid red;
-}
-
-#description > div {
-	padding: 0 8px;
-}
-#description > div:hover {	
-	color: #00ff0a;	
-}
-
-/* nice naming asshole */
-#rightContainerRightZone {
-	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: start;
 	
-}
-.rightBox {
-	height: var(--right-cells-size);
-	width: var(--right-cells-size);
-}
-#targetsInfo {
-	line-height: var(--right-cells-size);
-	text-align:center;
-	background-image: url("content/img/background_1opacity.png");
-	background-size: 100% 100%;
-}
-
-#targetsInfo > span {	
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;	
 }

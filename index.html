@@ -4,6 +4,8 @@
 		<title>CruSGod</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="leftArea.css">
+		<link rel="stylesheet" href="rightArea.css">
 	</head>
 	<body>	
 		<script src="content/scripts/mousePositionToCss.js"></script>
@@ -22,53 +24,68 @@
 						<img src="content/img/icon_weapons.png">
 						<div class="noteOnHover">Weapons list</div>
 					</div>
+					<div class = "leftTopButton">
+						<img src="content/img/mystery.png">
+						<div class="noteOnHover">Fish list</div>
+					</div>
+					
 				</div>
 			</div>		
 			
 			<div id="leftBottom">
-				<div id="levelsList" style="display: none;">						
+				<div id="levelsList" class = "leftSubGrid" style="display: none;">						
 					<script>
 						{
-						let strr = '<div class="levelsEntry"><img src="content/img/1.png"></div>';
+						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
 						for (let i = 0; i < 20; i++) {
 						document.getElementById("levelsList").innerHTML += strr;
 						}
 						}
 					</script>		
 				</div>
-				<div id="equipmentList" style="display: none;">
-					<script>
-						{
-							let strr = '<div class="equipEntry"><img src="content/img/1.png"></div>';
-							for (let i = 0; i < 48; i++) {
-								document.getElementById("equipmentList").innerHTML += strr;
-							}
-						}
-					</script>
+				<div id="equipmentList" class = "leftSubGrid" ">
+				<script>
+				{
+				let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
+				for (let i = 0; i < 48; i++) {
+				document.getElementById("equipmentList").innerHTML += strr;
+				}
+				}
+				</script>
 				</div>
 			</div>
 		</div>
-		<div id="rightContainer">			
-			<div id="description">
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus lorem, euismod in diam finibus, posuere imperdiet eros. Nullam magna libero, pharetra eget congue a, blandit ac ante. Vivamus sit amet mollis felis. Sed a ultricies ipsum. Vivamus ipsum enim, euismod nec nisi ut, ullamcorper vestibulum eros. Praesent ligula lectus, porta quis sodales nec, eleifend ut lectus. Nulla rhoncus lacus sed justo viverra ornare. Cras elementum lacus at finibus gravida. Donec ornare ut nisi sit amet ultrices. Nunc interdum purus a sapien tempus, ut vestibulum libero blandit. Phasellus quam dolor, placerat sit amet iaculis in, tristique sodales eros. Integer vitae efficitur leo, quis finibus dolor. Cras sit amet semper lacus. Phasellus ligula neque, pulvinar sit amet erat vel, dictum feugiat leo.
-					
-					Mauris quam nisl, ultricies rutrum faucibus nec, sagittis id quam. Curabitur ex ex, sodales eu molestie non, molestie at sapien. Etiam leo mauris, pulvinar ut ipsum in, vestibulum viverra leo. Morbi ac eros consectetur, facilisis massa et, aliquam sem. Curabitur dignissim ornare venenatis. Cras consequat efficitur nisl, et hendrerit quam fringilla eget. Donec tellus turpis, tristique vitae nulla pharetra, lobortis aliquet sem.
-					
-					Quisque aliquet dapibus bibendum. Sed at dui bibendum, cursus mauris et, vehicula sem. Cras dignissim metus a orci ullamcorper, id pellentesque neque accumsan. Nullam id orci ante. Aenean venenatis, est id accumsan efficitur, nunc nunc lobortis leo, in eleifend lectus quam vitae nunc. Duis eleifend, augue in aliquet pharetra, nisl ligula consequat dui, quis consectetur sapien ante eu ante. Aliquam pretium auctor eros, at ultricies neque scelerisque aliquam. Quisque consectetur nulla vel tortor maximus, sed commodo purus interdum.
-					
-					Etiam sed tellus et nisl hendrerit semper gravida vel diam. Fusce tincidunt elementum nulla id tincidunt. Maecenas id porta purus, eget varius nibh. Donec eu erat vitae leo pharetra hendrerit. Aenean in felis urna. Cras at nibh sed eros dignissim sollicitudin. Donec semper pretium viverra. Quisque ipsum erat, ultrices et ullamcorper non, ultricies eu nulla. Duis nisl ligula, porttitor id mi quis, sollicitudin porta sapien. Quisque at egestas elit. Aenean gravida ligula sed egestas sodales. Donec porta, mi quis congue fermentum, ipsum est porttitor elit, vitae blandit leo urna auctor ex. Suspendisse malesuada mi eu nisi varius varius. Phasellus vel felis turpis.
-					
-				Vivamus condimentum sodales pellentesque. Ut imperdiet faucibus nulla a tincidunt. Cras venenatis ipsum vel orci egestas ultricies. Vivamus lacinia dapibus neque, semper posuere urna aliquet ut. Suspendisse bibendum sem sed pretium consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut tristique diam in varius dapibus. Sed pulvinar magna lacus, nec vehicula ipsum vehicula tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; </div>
+		<div id="rightContainer">		
+		<script>
+		
+		</script>
+			<div class="testSquare">
+				aaaaaaaaaaaaaaaaaaaaa
+				aaaaaaaaaaaaaaaaaaaaa
 			</div>
-			<div id="rightContainerRightZone">
-				<img id="handlerFace" class="rightBox" src="content/img/handler1.png">
-				<div id="targetsInfo" class="rightBox">
+			<div id="rightGrid" style="display:none;">
+				<div id="description" style="grid-area: a1">
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus lorem, euismod in diam finibus, posuere imperdiet eros. Nullam magna libero, pharetra eget congue a, blandit ac ante. Vivamus sit amet mollis felis. Sed a ultricies ipsum. Vivamus ipsum enim, euismod nec nisi ut, ullamcorper vestibulum eros. Praesent ligula lectus, porta quis sodales nec, eleifend ut lectus. Nulla rhoncus lacus sed justo viverra ornare. Cras elementum lacus at finibus gravida. Donec ornare ut nisi sit amet ultrices. Nunc interdum purus a sapien tempus, ut vestibulum libero blandit. Phasellus quam dolor, placerat sit amet iaculis in, tristique sodales eros. Integer vitae efficitur leo, quis finibus dolor. Cras sit amet semper lacus. Phasellus ligula neque, pulvinar sit amet erat vel, dictum feugiat leo.
+						
+						Mauris quam nisl, ultricies rutrum faucibus nec, sagittis id quam. Curabitur ex ex, sodales eu molestie non, molestie at sapien. Etiam leo mauris, pulvinar ut ipsum in, vestibulum viverra leo. Morbi ac eros consectetur, facilisis massa et, aliquam sem. Curabitur dignissim ornare venenatis. Cras consequat efficitur nisl, et hendrerit quam fringilla eget. Donec tellus turpis, tristique vitae nulla pharetra, lobortis aliquet sem.
+						
+						Quisque aliquet dapibus bibendum. Sed at dui bibendum, cursus mauris et, vehicula sem. Cras dignissim metus a orci ullamcorper, id pellentesque neque accumsan. Nullam id orci ante. Aenean venenatis, est id accumsan efficitur, nunc nunc lobortis leo, in eleifend lectus quam vitae nunc. Duis eleifend, augue in aliquet pharetra, nisl ligula consequat dui, quis consectetur sapien ante eu ante. Aliquam pretium auctor eros, at ultricies neque scelerisque aliquam. Quisque consectetur nulla vel tortor maximus, sed commodo purus interdum.
+						
+						Etiam sed tellus et nisl hendrerit semper gravida vel diam. Fusce tincidunt elementum nulla id tincidunt. Maecenas id porta purus, eget varius nibh. Donec eu erat vitae leo pharetra hendrerit. Aenean in felis urna. Cras at nibh sed eros dignissim sollicitudin. Donec semper pretium viverra. Quisque ipsum erat, ultrices et ullamcorper non, ultricies eu nulla. Duis nisl ligula, porttitor id mi quis, sollicitudin porta sapien. Quisque at egestas elit. Aenean gravida ligula sed egestas sodales. Donec porta, mi quis congue fermentum, ipsum est porttitor elit, vitae blandit leo urna auctor ex. Suspendisse malesuada mi eu nisi varius varius. Phasellus vel felis turpis.
+						
+					Vivamus condimentum sodales pellentesque. Ut imperdiet faucibus nulla a tincidunt. Cras venenatis ipsum vel orci egestas ultricies. Vivamus lacinia dapibus neque, semper posuere urna aliquet ut. Suspendisse bibendum sem sed pretium consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut tristique diam in varius dapibus. Sed pulvinar magna lacus, nec vehicula ipsum vehicula tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; </div>
+				</div>				
+				<img id="handlerFace" class="rightBox" style="grid-area: a2;" src="content/img/handler1.png">
+				<div id="targetsInfo" class="rightBox" style='grid-area: a3; background-image: url("content/img/background_1opacity.png");' >
 					<span>text line one<br>
 					text longer line ayy</span>
 				</div>
-				<a href="http://google.com"><img id="biggerImage" class="rightBox" src="content/img/missions/bonus1.png" ></a>
+				<a href="http://google.com" class="rightBox" style="grid-area: a4;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>			
+				<a href="http://google.com" class="rightBox" style="grid-area: a5;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>	
+					<a href="http://google.com" class="rightBox" style="grid-area: a6;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>	
 			</div>
+			
 		</div>
 	</body>
 </html>					
