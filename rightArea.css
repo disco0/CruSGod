@@ -3,10 +3,14 @@
 }
 
 #rightContainer {
-	flex: 1 1 calc(var(--cells-size) * var(--cells-equip-row));
+	 flex: 1 1 calc(var(--cells-size) * var(--cells-equip-row)); 
 	/* height: calc(100% - (var(--cells-size))); */
+	display: block;
 	padding: calc(var(--cells-size) / 2);
 	background-color: yellow;
+	inline-size: 100%;
+	align-self: stretch;
+	justify-self: stretch;
 }
 
 #rightGrid {	
@@ -15,7 +19,7 @@
 	display: grid;	
 	/* width: min-content; */
 	/* height: min-content; */
-	grid: repeat(3, calc(100%/3)) / repeat(3, calc(100%/3)); 
+	grid: repeat(3, calc(100%/3)) / repeat(3, clc(100%/3)); 
 	/* grid: repeat(3, 200px) / repeat(3, 200px); */
 	/* grid:  var(--right-cells-size) var(--right-cells-size) var(--right-cells-size) / var(--right-cells-size) var(--right-cells-size) var(--right-cells-size); */
 	grid-template-areas: 
@@ -27,9 +31,9 @@
 .testSquare {	
 	/* display:inline-flex; */
 	background-color: darkred;
-	--test: 10%;
+	--test: 100%;
 	width: var(--test);
-	height: var(--test);
+	height: max-content;
 }
 
 
