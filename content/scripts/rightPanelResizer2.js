@@ -2,7 +2,7 @@ const root = document.documentElement;
 var rightContainer;
 
 function onStart() {
-	rightContainer = document.getElementById("rightElement");
+	rightContainer = document.getElementById("rightContainer");
 }
 
 function resize() {
