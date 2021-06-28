@@ -18,7 +18,7 @@
 	display: grid;	
 	/* width: min-content; */
 	/* height: min-content; */
-	grid: repeat(3, calc(100%/3)) / repeat(3, clc(100%/3)); 
+	grid: repeat(3, calc(100%/3)) / repeat(3, calc(100%/3)); 
 	/* grid: repeat(3, 200px) / repeat(3, 200px); */
 	/* grid:  var(--right-cells-size) var(--right-cells-size) var(--right-cells-size) / var(--right-cells-size) var(--right-cells-size) var(--right-cells-size); */
 	grid-template-areas: 
