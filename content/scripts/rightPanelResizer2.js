@@ -8,6 +8,14 @@
 	}
 
 	function resize() {
+		
+		if (topOffset == 0) { 
+			
+		}
+		else {
+			
+		}
+		/*
 		var leftOffset = rightContainer.offsetLeft;
 		var topOffset = rightContainer.offsetTop;	
 
@@ -30,7 +38,7 @@
 
 		root.style.setProperty("--rightContainerSize", contentSize + "px");
 		console.info(paddingH, paddingV);
-
+*/
 	}
 
 	window.addEventListener('load', onStart);
