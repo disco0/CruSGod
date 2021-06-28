@@ -1,7 +1,7 @@
 var id = "rightContainer";
 function setRightPanelHeight() {
 	rightPanel = document.getElementById(id);	
-	console.info(innerHeigth, rightPanel.offsetTop);
+	console.info(innerHeight, rightPanel.offsetTop);
 	rightPanel.style.height = innerHeight - rightPanel.offsetTop + "px";
 	
 }
