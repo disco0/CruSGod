@@ -26,36 +26,6 @@
 	"a1 a1 a3"
 	"a6 a5 a4";	
 }
-
-.testSquare {	
-	/* display:inline-flex; */
-	background-color: darkred;
-	--test: 100%;
-	width: var(--test);
-	height: max-content;
-}
-
-
-.fuck {
-	background-color: green;
-	display:inline-block;
-    height:100%;
-}
-
-.fuck > div{
-    display:block;
-    height:100%;
-    width:auto;
-	content: url("aspectRatio.png"); 
-}
-.testContent {
-	background-color: darkred;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
 /* big text descritption */
 #description {	
 	text-shadow: 2px 2px #000f;
