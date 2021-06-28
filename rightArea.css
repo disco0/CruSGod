@@ -16,6 +16,7 @@
 	display: grid;	
 	width: var(--rightContainerSize); 
 	height: var(--rightContainerSize); 
+	grid: repeat(3, var(--rightContainerSize)/3)) / repeat(3, calc(var(--rightContainerSize)/3)); 
 	grid-template-areas: 
 	"a1 a1 a2"
 	"a1 a1 a3"
