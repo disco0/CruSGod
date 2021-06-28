@@ -6,4 +6,4 @@ function setRightPanelHeight() {
 	
 }
 window.addEventListener('resize', setRightPanelHeight);
-window.addEventListener('DOMContentLoaded', setRightPanelHeight);
+window.addEventListener('load', setRightPanelHeight);
