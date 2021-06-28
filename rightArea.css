@@ -18,7 +18,7 @@
 	display: grid;	
 	/* width: min-content; */
 	/* height: min-content; */
-	background: url(aspectRatio.png)
+	background: url(aspectRatio.png);
 	grid-template-areas: 
 	"a1 a1 a2"
 	"a1 a1 a3"
