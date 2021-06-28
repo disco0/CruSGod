@@ -1,9 +1,10 @@
 {
 	const root = document.documentElement;
 	var rightContainer;
-
+	var leftContatiner;
 	function onStart() {
 		rightContainer = document.getElementById("rightContainer");
+		leftContatiner = document.getElementById("leftContatiner");
 	}
 
 	function resize() {
@@ -16,8 +17,9 @@
 		var contentWidth = innerWidth - leftOffset - paddingH; //avaliable
 		var contentHeight = innerHeight - topOffset - paddingV;
 
-
-		var contentSize = Math.min(contentWidth, contentHeight);
+		var leftHeight = leftContatiner.clientHeight;
+		
+		var contentSize = Math.min(contentWidth, contentHeight, leftHeight);
 		//var padding = parseInt(style.getPropertyValue("padding"), 10)
 		if (topOffset > 0) 
 		{
