@@ -14,7 +14,8 @@
 #rightGrid {	
 	background-color: purple;
 	display: grid;	
-	width: var(--rightContainerSize); 
+	width: var(--rightContainerSize);
+	min-width: var(--cells-size * 4);
 	height: var(--rightContainerSize); 
 	grid: repeat(3, calc(var(--rightContainerSize) / 3)) / repeat(3, calc(var(--rightContainerSize) / 3)); 
 	grid-template-areas: 
