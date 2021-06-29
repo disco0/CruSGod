@@ -1,0 +1,5 @@
+@media only screen and (max-width: calc(var(--cells-size) * var((--cells-equip-row) + 1)) {
+  #rightContainer {
+    background-color: lightblue;
+  }
+}
