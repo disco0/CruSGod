@@ -10,11 +10,7 @@
 	inline-size: 100%;
 	align-self: stretch;
 }
-@media only screen and (max-width: calc(var(--cells-size) * var((--cells-equip-row) + 1)) {
-  #rightContainer {
-    background-color: lightblue;
-  }
-}
+
 #rightGrid {	
 	background-color: purple;
 	display: grid;	
