@@ -3,7 +3,8 @@
 	--cells-levels-row: 5;
 	--cells-weapons-row: 6;
 	--cells-equip-row: 8;
-	--left-container-max-width: calc(var(--cells-equip-row) * var(--cells-size))
+	--left-container-max-width: calc(var(--cells-equip-row) * var(--cells-size));
+	--right-container-size: calc(min(100wv - var(--left-container-max-width), 100wh) - var(--cells-size));
 }
 
 * {
@@ -151,10 +152,10 @@ body {
 
 /* right area of page */
 #rightContainer {
-	min-height: calc(min(100vw, 100vh) - var(--cells-size));
-	min-width: calc(min(100vw, 100vh) - var(--cells-size));
-	max-height: calc(min(100vw, 100vh) - var(--cells-size));
-	max-width: calc(min(100vw, 100vh) - var(--cells-size));
+	min-height: var(--right-container-size);
+	min-width: var(--right-container-size);
+	max-height: var(--right-container-size);
+	max-width: var(--right-container-size);
 	display: flex;
 	padding: calc(var(--cells-size) / 2);
 	background-color: yellow;
