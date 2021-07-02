@@ -152,10 +152,10 @@ body {
 #rightContainer {
 	flex: 1 1;
 	position: absolute;
-	min-height: min(100vw, 100vh);
-	min-width: min(100vw, 100vh);
-	max-height: min(100vw, 100vh);
-	max-width: min(100vw, 100vh);
+	min-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
+	min-width: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
+	max-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
+	max-width: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
 	display: flex;
 	padding: calc(var(--cells-size) / 2);
 	background-color: yellow;
