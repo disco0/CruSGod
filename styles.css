@@ -3,6 +3,7 @@
 	--cells-levels-row: 5;
 	--cells-weapons-row: 6;
 	--cells-equip-row: 8;
+	--left-container-max-width: calc(var(--cells-equip-row) * var(--cells-size))
 }
 
 * {
@@ -51,7 +52,7 @@ body {
 	height: 100%;
 	width: 100%;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row;
 	justify-content: start;
 	align-content: baseline;
 	
