@@ -52,7 +52,7 @@ body {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: start;
 	align-content: baseline;
 	
 }
@@ -150,8 +150,6 @@ body {
 
 /* right area of page */
 #rightContainer {
-	flex: 1 1;
-	position: absolute;
 	min-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
 	min-width: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
 	max-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
