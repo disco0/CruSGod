@@ -150,10 +150,10 @@ body {
 
 /* right area of page */
 #rightContainer {
-	min-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
-	min-width: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
-	max-height: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
-	max-width: calc(min(100vw, 100vh) - (var(--cells-size) / 2));
+	min-height: calc(min(100vw, 100vh) - var(--cells-size));
+	min-width: calc(min(100vw, 100vh) - var(--cells-size));
+	max-height: calc(min(100vw, 100vh) - var(--cells-size));
+	max-width: calc(min(100vw, 100vh) - var(--cells-size));
 	display: flex;
 	padding: calc(var(--cells-size) / 2);
 	background-color: yellow;
