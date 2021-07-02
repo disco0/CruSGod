@@ -56,6 +56,9 @@ body {
 	align-content: baseline;
 	
 }
+
+/* left area of page */
+
 #leftContainer 
 {	
 	/* flex: 1 0 calc(var(--cells-size) * var(--cells-equip-row)); */
@@ -144,10 +147,13 @@ body {
 #equipmentList {
 	grid-template-columns: repeat(var(--cells-equip-row), var(--cells-size));	
 }
+
+/* right area of page */
 #rightContainer {
 	flex: 1 1;
-	height: 100%;
-	width: 100%;
+	position: absolute;
+	height: min(100vw, 100vh);
+	width: min(100vw, 100vh);
 	display: flex;
 	padding: calc(var(--cells-size) / 2);
 	background-color: yellow;
@@ -157,11 +163,8 @@ body {
 
 #rightGrid {	
 	background-color: purple;
-	display: grid;	
-	width: var(--rightContainerSize);
-	min-width: calc(var(--cells-size) * 4);
-	height: var(--rightContainerSize); 
-	grid: repeat(3, calc(var(--rightContainerSize) / 3)) / repeat(3, calc(var(--rightContainerSize) / 3)); 
+	display: grid;
+	grid: repeat(3, calc(100% / 3)) / repeat(3, calc(100% / 3)); 
 	grid-template-areas: 
 	"a1 a1 a2"
 	"a1 a1 a3"
