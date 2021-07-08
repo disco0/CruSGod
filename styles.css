@@ -90,6 +90,20 @@ body {
 	min-width: min-content;	
 	background-color:green;	
 }
+/* left top buttons */
+[name="topLeftCheckboxes"] {
+	display: none;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+#levelsCheckbox:not(:checked) ~ [for="levelsCheckbox"] {
+	display: none;
+}
+#equipmentCheckbox:not(:checked) ~ [for="equipmentCheckbox"] {
+	display: none;
+}
+
 #leftTopButtons {
 	height: var(--cells-size);
 	width: calc(var(--cells-size) * 4);
