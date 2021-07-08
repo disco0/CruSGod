@@ -156,12 +156,18 @@ body {
 	grid-template-columns: repeat(var(--cells-levels-row), var(--cells-size));	
 }
 
-/* equipment list */
-
 #equipmentList {
 	grid-template-columns: repeat(var(--cells-equip-row), var(--cells-size));	
 }
 
+#weaponsList {
+	grid-template-columns: repeat(var(--cells-weapons-row), var(--cells-size));
+}
+
+#fishList {
+	display: flex;
+	flex-direction: column;
+}
 /* right area of page */
 #rightContainer {
 	min-height: var(--right-container-size);
