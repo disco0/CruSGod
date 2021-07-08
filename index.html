@@ -39,7 +39,7 @@
 			
 			<div id="leftBottom">
 				<input type="checkbox" name="topLeftCheckboxes" id="levelsCheckbox">
-				<div id="levelsList" class = "leftSubGrid" style="display: none;">						
+				<div id="levelsList" class = "leftSubGrid">						
 					<script>
 						{
 						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
@@ -49,16 +49,17 @@
 						}
 					</script>		
 				</div>
+				
 				<input type="checkbox" name="topLeftCheckboxes" id="equipmentCheckbox">
-				<div id="equipmentList" class = "leftSubGrid" ">
-				<script>
-				{
-				let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
-				for (let i = 0; i < 48; i++) {
-				document.getElementById("equipmentList").innerHTML += strr;
-				}
-				}
-				</script>
+				<div id="equipmentList" class = "leftSubGrid">
+					<script>
+						{
+						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
+						for (let i = 0; i < 48; i++) {
+						document.getElementById("equipmentList").innerHTML += strr;
+						}
+						}
+					</script>
 				</div>
 			</div>
 		</div>
