@@ -97,9 +97,6 @@ body {
 	width: 0;
 	height: 0;
 }
-[name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
-	display: none;
-}
 
 #leftTopButtons {
 	height: var(--cells-size);
@@ -168,6 +165,11 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+[name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
+	display: none;
+}
+
 /* right area of page */
 #rightContainer {
 	min-height: var(--right-container-size);
