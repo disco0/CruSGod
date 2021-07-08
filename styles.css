@@ -162,11 +162,9 @@ body {
 	grid-template-columns: repeat(var(--cells-weapons-row), var(--cells-size));
 }
 
-#fishList {
-	display: flex;
-	flex-direction: column;
+[name="topLeftCheckboxes"]:checked + #fishList {
+	display: none;
 }
-
 [name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
 	display: none;
 }
