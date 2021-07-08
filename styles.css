@@ -163,7 +163,8 @@ body {
 }
 
 [name="topLeftCheckboxes"]:checked + #fishList {
-	display: none;
+	display: flex;
+	flex-direction: column;
 }
 [name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
 	display: none;
