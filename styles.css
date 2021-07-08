@@ -97,7 +97,7 @@ body {
 	width: 0;
 	height: 0;
 }
-[name="topLeftCheckboxes"]:not(:checked) ~ .leftSubGrid {
+[name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
 	display: none;
 }
 
