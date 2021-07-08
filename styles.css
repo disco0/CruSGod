@@ -97,10 +97,7 @@ body {
 	width: 0;
 	height: 0;
 }
-#levelsCheckbox:not(:checked) ~ [for="levelsCheckbox"] {
-	display: none;
-}
-#equipmentCheckbox:not(:checked) ~ [for="equipmentCheckbox"] {
+[name="topLeftCheckboxes"]:not(:checked) ~ .leftSubGrid {
 	display: none;
 }
 
