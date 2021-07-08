@@ -48,14 +48,35 @@
 						}
 						}
 					</script>		
-				</div>
-				
+				</div>				
 				<input type="checkbox" name="topLeftCheckboxes" id="equipmentCheckbox">
 				<div id="equipmentList" class = "leftSubGrid">
 					<script>
 						{
 						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
 						for (let i = 0; i < 48; i++) {
+						document.getElementById("equipmentList").innerHTML += strr;
+						}
+						}
+					</script>
+				</div>
+				<input type="checkbox" name="topLeftCheckboxes" id="weaponsCheckbox">
+				<div id="weaponsList" class = "leftSubGrid">
+					<script>
+						{
+						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
+						for (let i = 0; i < 15; i++) {
+						document.getElementById("equipmentList").innerHTML += strr;
+						}
+						}
+					</script>
+				</div>
+				<input type="checkbox" name="topLeftCheckboxes" id="fishCheckbox">
+				<div id="fishList" class = "leftSubGrid">
+					<script>
+						{
+						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
+						for (let i = 0; i < 6; i++) {
 						document.getElementById("equipmentList").innerHTML += strr;
 						}
 						}
