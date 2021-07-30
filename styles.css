@@ -147,8 +147,11 @@ body {
 }
 
 .leftSubGridEntry > img {	
-	width: 100%;
-	height: 100%;
+	width: var(--cells-size);
+	height: var(--cells-size);
+	object-fit: none;
+	object-position: 0% top;
+}
 }
 #levelsList {
 	grid-template-columns: repeat(var(--cells-levels-row), var(--cells-size));	
@@ -161,13 +164,24 @@ body {
 #weaponsList {
 	grid-template-columns: repeat(var(--cells-weapons-row), var(--cells-size));
 }
-
+/* left top buttons actions*/
 [name="topLeftCheckboxes"]:checked + #fishList {
 	display: flex;
 	flex-direction: column;
 }
 [name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
-	display: none;
+	visibility: hidden;
+}
+.leftSubGridEntry {
+	transition-property: visibility;	
+}
+[type="checkbox"]:not(:checked) + .leftSubGrid > .leftSubGridEntry {
+	visibility: hidden;
+	transition-delay: calc(var(--max-delay) - var(--delay));
+}
+[type="checkbox"]:checked + .leftSubGrid > .leftSubGridEntry {
+	visibility: visible;
+	transition-delay: var(--delay);
 }
 
 /* right area of page */
