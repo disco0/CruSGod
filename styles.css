@@ -170,13 +170,13 @@ body {
 	flex-direction: column;
 }
 [name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
-	visibility: hidden;
+	visibility: collapse;
 }
 .leftSubGridEntry {
 	transition-property: visibility;	
 }
 [type="checkbox"]:not(:checked) + .leftSubGrid > .leftSubGridEntry {
-	visibility: hidden;
+	visibility: collapse;
 	transition-delay: calc(var(--max-delay) - var(--delay));
 }
 [type="checkbox"]:checked + .leftSubGrid > .leftSubGridEntry {
