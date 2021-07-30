@@ -8,6 +8,7 @@
 	</head>
 	<body>	
 		<script src="content/scripts/mousePositionToCss.js"></script>
+		<script src="content/scripts/pageGenerator.js"></script>
 		<!--<script src="content/scripts/rightPanelResizer.js"></script> -->
 		<!--<script src="content/scripts/rightPanelResizer2.js"></script> -->
 		<div id="leftContainer">
@@ -35,49 +36,20 @@
 			
 			<div id="leftBottom">
 				<input type="checkbox" name="topLeftCheckboxes" id="levelsCheckbox">
-				<div id="levelsList" class = "leftSubGrid">						
-					<script>
-						{
-						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
-						for (let i = 0; i < 20; i++) {
-						document.getElementById("levelsList").innerHTML += strr;
-						}
-						}
-					</script>		
-				</div>				
+				<div id="levelsList" class = "leftSubGrid"></div>				
 				<input type="checkbox" name="topLeftCheckboxes" id="equipmentCheckbox">
-				<div id="equipmentList" class = "leftSubGrid">
-					<script>
-						{
-						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
-						for (let i = 0; i < 48; i++) {
-						document.getElementById("equipmentList").innerHTML += strr;
-						}
-						}
-					</script>
-				</div>
+				<div id="equipmentList" class = "leftSubGrid"></div>
 				<input type="checkbox" name="topLeftCheckboxes" id="weaponsCheckbox">
-				<div id="weaponsList" class = "leftSubGrid">
-					<script>
-						{
-						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
-						for (let i = 0; i < 15; i++) {
-						document.getElementById("weaponsList").innerHTML += strr;
-						}
-						}
-					</script>
-				</div>
+				<div id="weaponsList" class = "leftSubGrid"></div>
 				<input type="checkbox" name="topLeftCheckboxes" id="fishCheckbox">
-				<div id="fishList" class = "leftSubGrid">
-					<script>
-						{
-						let strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';
-						for (let i = 0; i < 6; i++) {
-						document.getElementById("fishList").innerHTML += strr;
-						}
-						}
-					</script>
-				</div>
+				<div id="fishList" class = "leftSubGrid"></div>
+				<script>
+					style = getComputedStyle(document.body)
+					generateList("levelsList", 20, style.getPropertyValue('--cells-levels-row'));
+					generateList("equipmentList", 48, style.getPropertyValue('--cells-equipment-row'));
+					generateList("weaponsList", 15, style.getPropertyValue('--cells-weapons-row'));
+					generateList("fishList", 7, 1);
+				</script>
 			</div>
 		</div>
 		<div id="rightContainer">		
