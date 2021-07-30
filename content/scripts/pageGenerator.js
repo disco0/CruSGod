@@ -4,7 +4,7 @@ function generateList(containerId, columnsCount, rowsCount)
 	var container = document.getElementById(containerId);
 	var animationSpeedDivider = 20;
 	container.style.setProperty("grid-template-columns", "repeat(" + columnsCount + ", 64px)");
-	for (let i = 0; i < columnsCount * rowsCount; i++) {
+	for (var i = 0; i < columnsCount * rowsCount; i++) {
 		container.innerHTML += strr;
 		let cell = container.lastElementChild;
 		var delay;
