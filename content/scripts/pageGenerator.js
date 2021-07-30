@@ -1,5 +1,5 @@
 function createGrid(containerId, totalCount, columnsCount){
-	var strr = '<div class="leftSubGridEntry"><img src="1.png"></div>';	
+	var strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';	
 	var container = document.getElementById(containerId);
 	var animationSpeedDivider = 20;
 	var rowsCount = Math.ceil(totalCount / columnsCount);
