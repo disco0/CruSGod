@@ -44,11 +44,11 @@
 				<input type="checkbox" name="topLeftCheckboxes" id="fishCheckbox">
 				<div id="fishList" class = "leftSubGrid"></div>
 				<script>
-					style = getComputedStyle(document.body)
-					generateList("levelsList", 20, style.getPropertyValue('--cells-levels-row'));
-					generateList("equipmentList", 48, style.getPropertyValue('--cells-equipment-row'));
-					generateList("weaponsList", 15, style.getPropertyValue('--cells-weapons-row'));
-					generateList("fishList", 7, 1);
+					style = getComputedStyle(document.body);
+					createGrid("levelsList", 20, style.getPropertyValue('--cells-levels-row'));
+					createGrid("equipmentList", 48, style.getPropertyValue('--cells-equipment-row'));
+					createGrid("weaponsList", 15, style.getPropertyValue('--cells-weapons-row'));
+					createGrid("fishList", 7, 1);
 				</script>
 			</div>
 		</div>
