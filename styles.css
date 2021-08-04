@@ -2,8 +2,8 @@
 	--cells-size: 64px;
 	--cells-levels-row: 5;
 	--cells-weapons-row: 6;
-	--cells-equip-row: 8;
-	--left-container-max-width: calc(var(--cells-size) * (var(--cells-equip-row) + 1));
+	--cells-equipment-row: 8;
+	--left-container-max-width: calc(var(--cells-size) * (var(--cells-equipment-row) + 1));
 	--right-container-A:  calc(min(calc(100vw - var(--left-container-max-width)), 100vh) - var(--cells-size));
 	--right-container-size: max(var(--right-container-A), var(--left-container-max-width));
 }
@@ -64,8 +64,8 @@ body {
 
 #leftContainer 
 {	
-	/* flex: 1 0 calc(var(--cells-size) * var(--cells-equip-row)); */
-	/* min-width: calc(var(--cells-size) * var(--cells-equip-row)); */
+	/* flex: 1 0 calc(var(--cells-size) * var(--cells-equipment-row)); */
+	/* min-width: calc(var(--cells-size) * var(--cells-equipment-row)); */
 	height: min-content;
 	background-color:cyan;
 	display: flex;
@@ -158,7 +158,7 @@ body {
 }
 
 #equipmentList {
-	grid-template-columns: repeat(var(--cells-equip-row), var(--cells-size));	
+	grid-template-columns: repeat(var(--cells-equipment-row), var(--cells-size));	
 }
 
 #weaponsList {
