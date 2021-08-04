@@ -149,7 +149,7 @@ body {
 .leftSubGridEntry > img {	
 	width: var(--cells-size);
 	height: var(--cells-size);
-	object-fit: none;
+	object-fit: cover;
 	object-position: 0% top;
 }
 }
