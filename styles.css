@@ -176,7 +176,7 @@ body {
 
 [name="topLeftCheckboxes"]:checked + .leftSubGrid {
 	max-height: 100%;
-	transition-delay: 0;
+	transition-delay: 0s;
 }
 
 .leftSubGridEntry {
