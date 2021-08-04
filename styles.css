@@ -174,7 +174,7 @@ body {
 	transition-delay: var(--max-delay);
 }
 
-[name="topLeftCheckboxes"]:not(:checked) + .leftSubGrid {
+[name="topLeftCheckboxes"]:checked + .leftSubGrid {
 	max-height: 100%;
 	transition-delay: 0;
 }
