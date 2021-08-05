@@ -13,7 +13,7 @@ function createGrid(containerId, totalCount, columnsCount){
 			delay = i;							
 			} else {	
 			delay = columnsCount + Math.trunc(i / columnsCount);
-			console.log(delay);
+			console.log(columnsCount, i, i / columnsCount, delay);
 		}
 		delay /= animationSpeedDivider + (0.5 - Math.random()) * 1;
 		//delay /= animationSpeedDivider;
