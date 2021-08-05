@@ -17,7 +17,7 @@ function createGrid(containerId, totalCount, columnsCount) {
 	columnsCount=parseInt(columnsCount);	
   
 	var cellClass = "leftSubGridEntry";
-	var cellImgSrc = "content/img/1.png";
+	var cellImgSrc = "content/img/Disabled_Button.png";
 	var animationSpeedDivider = 20;
 	var randomStrength = 1;
   
