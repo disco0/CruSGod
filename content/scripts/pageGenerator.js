@@ -1,10 +1,11 @@
 function createGrid(containerId, totalCount, columnsCount){
+	totalCount=parseInt(totalCount);
+	columnsCount=parseInt(columnsCount);			  
 	var strr = '<div class="leftSubGridEntry"><img src="content/img/1.png"></div>';	
 	var container = document.getElementById(containerId);
 	var animationSpeedDivider = 20;
 	var rowsCount = Math.ceil(totalCount / columnsCount);
-	container.style.setProperty("grid-template-columns", "repeat(" + columnsCount + ", 64px)");
-	console.log(containerId);	
+	container.style.setProperty("grid-template-columns", "repeat(" + columnsCount + ", 64px)");	
 	for (var i = 0; i < totalCount; i++) {
 		container.innerHTML += strr;
 		let cell = container.lastElementChild;
@@ -13,7 +14,6 @@ function createGrid(containerId, totalCount, columnsCount){
 			delay = i;							
 			} else {	
 			delay = columnsCount + Math.trunc(i / columnsCount);
-			console.log(columnsCount, i, i / columnsCount, delay);
 		}
 		delay /= animationSpeedDivider + (0.5 - Math.random()) * 1;
 		//delay /= animationSpeedDivider;
@@ -21,5 +21,4 @@ function createGrid(containerId, totalCount, columnsCount){
 		container.style.setProperty("--max-delay", delay + "s");
 		//console.log(delay);
 	}	
-	console.log("===========");
 }					
