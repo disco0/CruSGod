@@ -7,10 +7,7 @@
 		<link rel="stylesheet" href="stylesMobile.css">
 	</head>
 	<body>	
-		<script src="content/scripts/mousePositionToCss.js"></script>
-		<script src="content/scripts/pageGenerator.js"></script>
-		<!--<script src="content/scripts/rightPanelResizer.js"></script> -->
-		<!--<script src="content/scripts/rightPanelResizer2.js"></script> -->
+		<script src="content/scripts/scripts.js"></script>
 		<div id="leftContainer">
 			<div id="leftTop">
 				<div id ="leftTopButtonsContainer">
@@ -49,6 +46,7 @@
 					createGrid("equipmentList", 48, style.getPropertyValue('--cells-equipment-row'));
 					createGrid("weaponsList", 15, style.getPropertyValue('--cells-weapons-row'));
 					createGrid("fishList", 7, 1);
+					randomizeGrid();
 				</script>
 			</div>
 		</div>
@@ -76,7 +74,7 @@
 				</div>
 				<a href="http://google.com" class="rightBox" style="grid-area: a4;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>			
 				<a href="http://google.com" class="rightBox" style="grid-area: a5;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>	
-					<a href="http://google.com" class="rightBox" style="grid-area: a6;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>	
+				<a href="http://google.com" class="rightBox" style="grid-area: a6;" ><img id="biggerImage" class="rightBox" src="content/img/missions/Level1.png" ></a>	
 			</div>
 			
 		</div>
