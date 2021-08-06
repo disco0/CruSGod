@@ -42,14 +42,21 @@ function createGrid(containerId, totalCount, columnsCount) {
 	}	
 }	
 
-//Grid images randomizer
-function randomizeGrid(){
-	Array.from(document.querySelectorAll('.leftSubGridEntry > img')).forEach(el => 
-	{
-		var positions = ['0%', '33%', '66%', '100%'];
-		var position = positions[Math.floor(Math.random() * positions.length)]
-		el.style.objectPosition = position + ' top';
-		console.info(el.objectPosition);		
-	});
+//Randomizes offset in horizontally tiled images, src: image source, imagesCount: how much images in file
+function randomizeAllImagesWithSrc(src, imagesCount){
+	var positions = [];
+	for (var i = 0; i < imagesCount; i++) {	
+		positions.push(Number.parseFloat(100 / 3 * i).toFixed(2) + '%');
+	}
+	console.log(positions);
+	Array.from(document.getElementsByTagName("img")).forEach(el => 
+		{		
+			imagesCount = parseInt(imagesCount);
+			if (el.attributes.src.value == src) 
+			{			
+				var position = positions[Math.floor(Math.random() * positions.length)]
+				el.style.objectPosition = position + ' top';		
+			}
+		});		
 }
 
