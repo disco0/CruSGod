@@ -109,12 +109,16 @@ body {
 {
 	width: 100%;
 	height: 100%;
+}
+.leftTopButton:enabled
+{
 	cursor: pointer;
 }
 .leftTopButton > img
 {
-	height:100%;
-	width:100%;
+	height:var(--cells-size);
+	width:var(--cells-size);
+	object-fit: cover;
 }
 /* var(--mouse-x) and var(--mouse-y) from mousePositionToCss.js script*/
 .noteOnHover {	
