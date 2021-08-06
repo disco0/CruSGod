@@ -110,10 +110,7 @@ body {
 	width: 100%;
 	height: 100%;
 }
-.leftTopButton:enabled
-{
-	cursor: pointer;
-}
+
 .leftTopButton > img
 {
 	height:var(--cells-size);
@@ -133,12 +130,19 @@ body {
 	top: calc(var(--mouse-y) * 100%);
 }
 
-.leftTopButton:hover > .noteOnHover {
+.leftTopButton > .enabled
+{
+	cursor: pointer;
+}
+
+.leftTopButton > .enabled:hover ~ .noteOnHover {
 	display: block;
 }
-.leftTopButton:not(:hover) > .noteOnHover {
+.leftTopButton > .enabled:not(:hover) ~ .noteOnHover {
 	display: none;
 }
+
+
 /* levels list */
 
 .leftSubGrid {
