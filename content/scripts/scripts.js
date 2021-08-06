@@ -109,7 +109,6 @@ function randomizeAllImagesWithSrc(src, imagesCount){
 	for (var i = 0; i < imagesCount; i++) {	
 		positions.push(Number.parseFloat(100 / 3 * i).toFixed(2) + '%');
 	}
-	console.log(positions);
 	Array.from(document.getElementsByTagName("img")).forEach(el => 
 		{		
 			imagesCount = parseInt(imagesCount);
