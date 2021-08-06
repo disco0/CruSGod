@@ -11,6 +11,66 @@
 	});
 }
 
+//Will be executed after document load
+document.addEventListener("DOMContentLoaded", function(){
+	{ //Buttons logic
+		let gridsContainer = document.getElementById('leftBottom');
+		let labelsContainer = document.getElementById('leftTopButtonsContainer');
+		
+		//Too lazy to make a class
+		let checkboxes = gridsContainer.getElementsByTagName('input');
+		let labels = labelsContainer.getElementsByTagName('label');
+		let labelsEnabledImg = [];
+		let labelsDisabledImg = [];
+		
+		Array.from(labels).forEach(el => {
+			labelsEnabledImg.push(el.getElementsByClassName('enabled')[0]);
+			labelsDisabledImg.push(el.getElementsByClassName('disabled')[0]);
+		});
+		/*
+			Когда все выключены: все лабели Енаблед
+			Когда один включен: все кроме этого дисаблед, чекбоксы тоже дисаблед
+		*/
+		function toggleButtonMode(index, isEnabled){
+			labelsEnabledImg[index].hidden = !isEnabled;
+			labelsDisabledImg[index].hidden = isEnabled;
+			checkboxes[index].disabled = !isEnabled;
+		}
+		
+		function disableAllExcept(index){
+			index = parseInt(index);
+			for (let i = 0; i < checkboxes.length; i++) {
+				if (index != i) 
+				{
+					toggleButtonMode(i, false);
+				}
+			}
+		}		
+		function enableAll() {
+			for (let i = 0; i < checkboxes.length; i++) 
+			{
+				toggleButtonMode(i, true);
+			}
+		}
+		
+		for (let i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].addEventListener('change', function()
+				{						
+					if (checkboxes[i].checked)
+					{
+						disableAllExcept(i);
+					}
+					else {
+						let delay = parseFloat(checkboxes[i].nextElementSibling.style.getPropertyValue("--max-delay"));
+						delay *= 1000;
+						setTimeout(enableAll, delay);
+					}
+				});
+		}
+	}
+	
+});
+
 //Creates grid in containerId with totalCount elements and columnsCount rows
 function createGrid(containerId, totalCount, columnsCount) {
 	totalCount=parseInt(totalCount);
@@ -59,4 +119,5 @@ function randomizeAllImagesWithSrc(src, imagesCount){
 			}
 		});		
 }
+
 
