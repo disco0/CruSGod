@@ -27,10 +27,11 @@ document.addEventListener("DOMContentLoaded", function(){
 			labelsEnabledImg.push(el.getElementsByClassName('enabled')[0]);
 			labelsDisabledImg.push(el.getElementsByClassName('disabled')[0]);
 		});
-		/*
-			Когда все выключены: все лабели Енаблед
-			Когда один включен: все кроме этого дисаблед, чекбоксы тоже дисаблед
-		*/
+
+		Array.from(checkboxes).forEach(el => {
+			el.checked = false;
+			});
+		
 		function toggleButtonMode(index, isEnabled){
 			labelsEnabledImg[index].hidden = !isEnabled;
 			labelsDisabledImg[index].hidden = isEnabled;
